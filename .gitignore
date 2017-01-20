@@ -1,0 +1,7 @@
+.flatpak-builder
+factorio.flatpak
+gnome-sdk.gpg
+tmp
+repo
+factorio.tar.gz
+factorio/

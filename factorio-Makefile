@@ -1,0 +1,20 @@
+all:
+	true
+
+install:
+	#Wrapper script
+	mkdir -p /app/bin/
+	install factorio.sh /app/bin/factorio
+	#Config file which allows us to set where factorio stores configuration/saves
+	mkdir -p /app/share/factorio/
+	install config-path.cfg /app/share/factorio/config-path.cfg
+	#Install desktop file
+	mkdir -p /export/share/applications/
+	install com.factorio.factorio.desktop /export/share/applications/com.factorio.factorio.desktop
+	#Install factorio icon
+	mkdir -p /export/share/icons/hicolor/64x64/apps/
+	install data/core/graphics/factorio-icon.png /export/share/icons/hicolor/64x64/apps/com.factorio.factorio.png
+	#Actually install the game
+	mkdir -p /app/share/factorio/bin/x64/
+	install bin/x64/factorio /app/share/factorio/bin/x64/factorio
+	cp -r data /app/share/factorio/data

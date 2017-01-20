@@ -1,0 +1,8 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=Factorio
+ Exec=/app/factorio/bin/x64/factorio
+ Icon=/app/factorio/data/core/graphics/factorio.png
+ Type=Application
+ Categories=Game;
+

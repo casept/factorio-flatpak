@@ -1,0 +1,61 @@
+{
+  "app-id": "com.factorio.factorio",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.22",
+  "sdk": "org.gnome.Sdk",
+  "command": "factorio",
+  "finish-args": [
+      /* X11 access */
+      "--socket=x11", "--share=ipc",
+      /* OpenGL access */
+      "--device=dri",
+      /* PulseAudio access */
+      "--socket=pulseaudio",
+      /* Network access */
+      "--share=network",
+      /* Wayland access */
+      "--socket=wayland",
+      /* Persist saves and config files */
+      "--persist=~/.factorio"
+
+
+  ],
+  "modules": [
+
+	  {
+          "name": "factorio",
+          "no-autogen": true,
+          "sources" : [
+              {
+                  "type": "archive",
+                  "path": "factorio.tar.gz",
+                  "dest-filename": "factorio.tar.gz"
+              },
+              {
+                  "type": "file",
+                  "path": "com.factorio.factorio.desktop",
+                  "dest-filename": "com.factorio.factorio.desktop"
+              },
+              {
+                  "type": "file",
+                  "path": "factorio-Makefile",
+                  "dest-filename": "Makefile"
+              },
+              {
+                  "type": "file",
+                  "path": "config-path.cfg",
+                  "dest-filename": "config-path.cfg"
+              },
+              {
+                  "type": "file",
+                  "path": "factorio.sh",
+                  "dest-filename": "factorio.sh"
+              },
+              {
+                  "type": "file",
+                  "path": "com.factorio.factorio.appdata.xml"
+              }
+          ]
+      }
+  ]
+}

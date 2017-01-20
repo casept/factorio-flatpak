@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.factorio.factorio.desktop</id>
+  <name>Factorio</name>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Factorio is a game in which you build and maintain factories.</summary>
+  <description>
+    <p>
+      A computer game, I should probably borrow some description from
+      wikipedia.
+    </p>
+  </description>
+  <url type="homepage">https://factorio.com/</url>
+  <screenshots>
+    <screenshot type="default">
+	    <image>https://us1.factorio.com/assets/img/screenshots/thumb-screenshot-8.jpg</image>
+    </screenshot>
+  </screenshots>
+  <project_license>LicenseRef-proprietary</project_license>
+  <developer_name>Wube Software</developer_name>
+</component>

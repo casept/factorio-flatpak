@@ -9,11 +9,14 @@ install:
 	mkdir -p /app/share/factorio/
 	install config-path.cfg /app/share/factorio/config-path.cfg
 	#Install desktop file
-	mkdir -p /export/share/applications/
-	install com.factorio.factorio.desktop /export/share/applications/com.factorio.factorio.desktop
+	mkdir -p /app/share/applications/
+	install com.factorio.factorio.desktop /app/share/applications/com.factorio.factorio.desktop
 	#Install factorio icon
-	mkdir -p /export/share/icons/hicolor/64x64/apps/
-	install data/core/graphics/factorio-icon.png /export/share/icons/hicolor/64x64/apps/com.factorio.factorio.png
+	mkdir -p /app/share/icons/hicolor/64x64/apps/
+	install data/core/graphics/factorio-icon.png /app/share/icons/hicolor/64x64/apps/com.factorio.factorio.png
+	#Install appdata
+	mkdir -p /app/share/appdata/
+	install com.factorio.factorio.appdata.xml /app/share/appdata/com.factorio.factorio.appdata.xml
 	#Actually install the game
 	mkdir -p /app/share/factorio/bin/x64/
 	install bin/x64/factorio /app/share/factorio/bin/x64/factorio

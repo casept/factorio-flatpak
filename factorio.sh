@@ -15,4 +15,4 @@ if [ ! -f $CONFIG_FILE ]; then
 fi
 
 # Launch the game
-/app/factorio/bin/x*/factorio --config $CONFIG_FILE 
+exec /app/factorio/bin/x*/factorio --config $CONFIG_FILE "$@" 

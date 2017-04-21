@@ -1,10 +1,9 @@
 diff -ENwbur factorio-orig/config-path.cfg factorio/config-path.cfg
 --- factorio-orig/config-path.cfg	2017-04-21 16:57:21.319369129 +0200
-+++ factorio/config-path.cfg	2017-04-21 16:57:38.455578092 +0200
-@@ -8,4 +8,4 @@
- #Factorio directory that can be copied anywhere needed (on usb etc), also for people, who don't like to manipulate saves
- #in the windows users directory structure (as me, kovarex).
- #Note, that once the values in config are generated, this value has no effects (unless you delete config, or the path.read-data/path.write-data values)
--use-system-read-write-data-directories=false
-\ No newline at end of file
-+use-system-read-write-data-directories=true
++++ factorio/config-path.cfg	2017-04-21 18:58:32.307744943 +0200
+@@ -1,4 +1,4 @@
+-config-path=__PATH__executable__/../../config
++config-path=.factorio/config
+ 
+ #This value specifies the way the aplication generates default values for path.read-data and path.write-data
+ #When set to true, it will use system directories (Users/Name/AppData/Roaming/Factorio on windows), this is set to true

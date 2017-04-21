@@ -19,7 +19,7 @@
       /* Wayland access */
       "--socket=wayland",
       /* Persist saves and config files */
-      "--persist=~/.factorio"
+      "--persist=.factorio"
   ],
 
   "modules": [
@@ -28,14 +28,17 @@
           "name": "factorio",
           "buildsystem": "simple",
 	  "build-commands": [
-	    "mkdir -p /app/factorio/",
 	    "mkdir -p /app/share/icons/hicolor/64x64/apps/",
 	    "install data/core/graphics/factorio-icon.png /app/share/icons/hicolor/64x64/apps/factorio.png",
+
 	    "mkdir -p /app/share/applications/",
 	    "install factorio.desktop /app/share/applications/factorio.desktop",
-	    "mv * /app/factorio/",
-	    "mkdir -p /app/bin",
-	    "ln -s /app/factorio/bin/x*/factorio /app/bin/factorio"
+
+	    "mkdir -p /app/bin/",
+	    "cp factorio.sh /app/bin/factorio",
+
+	    "mkdir -p /app/factorio/",
+	    "mv * /app/factorio/"
 	  ],
           "sources" : [
               {
@@ -49,6 +52,14 @@
               {
                   "type": "file",
                   "path": "factorio.desktop"
+              },
+              {
+                  "type": "file",
+                  "path": "config.ini"
+              },
+              {
+                  "type": "file",
+                  "path": "factorio.sh"
               },
               {
                   "type": "file",

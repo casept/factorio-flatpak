@@ -1,0 +1,10 @@
+diff -ENwbur factorio-orig/config-path.cfg factorio/config-path.cfg
+--- factorio-orig/config-path.cfg	2017-04-21 16:57:21.319369129 +0200
++++ factorio/config-path.cfg	2017-04-21 16:57:38.455578092 +0200
+@@ -8,4 +8,4 @@
+ #Factorio directory that can be copied anywhere needed (on usb etc), also for people, who don't like to manipulate saves
+ #in the windows users directory structure (as me, kovarex).
+ #Note, that once the values in config are generated, this value has no effects (unless you delete config, or the path.read-data/path.write-data values)
+-use-system-read-write-data-directories=false
+\ No newline at end of file
++use-system-read-write-data-directories=true

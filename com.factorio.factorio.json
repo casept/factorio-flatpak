@@ -1,9 +1,12 @@
 {
   "app-id": "com.factorio.factorio",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.22",
-  "sdk": "org.gnome.Sdk",
+  "version": "0.14.22",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "1.4",
+  "sdk": "org.freedesktop.Sdk",
   "command": "factorio",
+  "rename-desktop-file": "factorio.desktop",
+  "rename-icon": "factorio",
   "finish-args": [
       /* X11 access */
       "--socket=x11", "--share=ipc",
@@ -17,39 +20,35 @@
       "--socket=wayland",
       /* Persist saves and config files */
       "--persist=~/.factorio"
-
-
   ],
+
   "modules": [
 
 	  {
           "name": "factorio",
-          "no-autogen": true,
+          "buildsystem": "simple",
+	  "build-commands": [
+	    "mkdir -p /app/factorio/",
+	    "mkdir -p /app/share/icons/hicolor/64x64/apps/",
+	    "install data/core/graphics/factorio-icon.png /app/share/icons/hicolor/64x64/apps/factorio.png",
+	    "mkdir -p /app/share/applications/",
+	    "install factorio.desktop /app/share/applications/factorio.desktop",
+	    "mv * /app/factorio/",
+	    "mkdir -p /app/bin",
+	    "ln -s /app/factorio/bin/x*/factorio /app/bin/factorio"
+	  ],
           "sources" : [
               {
                   "type": "archive",
-                  "path": "factorio.tar.gz",
-                  "dest-filename": "factorio.tar.gz"
+                  "path": "factorio-0.14.22.tar.gz"
+              },
+              {
+                  "type": "patch",
+                  "path": "patches/use-system-dirs.patch"
               },
               {
                   "type": "file",
-                  "path": "com.factorio.factorio.desktop",
-                  "dest-filename": "com.factorio.factorio.desktop"
-              },
-              {
-                  "type": "file",
-                  "path": "factorio-Makefile",
-                  "dest-filename": "Makefile"
-              },
-              {
-                  "type": "file",
-                  "path": "config-path.cfg",
-                  "dest-filename": "config-path.cfg"
-              },
-              {
-                  "type": "file",
-                  "path": "factorio.sh",
-                  "dest-filename": "factorio.sh"
+                  "path": "factorio.desktop"
               },
               {
                   "type": "file",

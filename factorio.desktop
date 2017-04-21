@@ -1,7 +1,7 @@
- [Desktop Entry]
- Encoding=UTF-8
- Name=Factorio
- Exec=factorio
- Icon=com.factorio.factorio.png
- Type=Application
- Categories=Game;
+[Desktop Entry]
+Encoding=UTF-8
+Name=Factorio
+Exec=factorio
+Icon=factorio
+Type=Application
+Categories=Game;

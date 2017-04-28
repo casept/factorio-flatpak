@@ -2,6 +2,9 @@
 
 A flatpak package for the game factorio by wube software. Requires game tarball downloaded from factorio's official site (not the steam version!).     
 
+## A note regarding 0.14.x      
+These versions of the game aren't officialy supported by the builder anymore as having the ability to build (and have installed) stable and experimental versions of the game at the same time would be tricky to handle. If you still need this version you should change it in 'com.factorio.factorio.json' and the 'Makefile'.
+
 ## Building     
 First checkout the repo:     
 ```
@@ -15,7 +18,7 @@ flatpak remote-add --user --if-not-exists --from gnome https://sdk.gnome.org/gno
 flatpak install --user gnome org.freedesktop.Sdk 1.4      
 flatpak install --user gnome org.freedesktop.Platform 1.4          
 ```
-Place a .tar.gz of version 0.14.22 of the game into the directory (It should be named `factorio-0.14.22.tar.gz`).     
+Place a .tar.gz of version 0.15.1 of the game into the directory (It should be named `factorio-0.15.1.tar.gz`).     
 Then run `make`. This will create a `.flatpak` file in the directory, which contains the game.     
 
 ## Installation      

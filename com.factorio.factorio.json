@@ -2,7 +2,7 @@
   "app-id": "com.factorio.factorio",
   "version": "0.15.10",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.4",
+  "runtime-version": "1.6",
   "sdk": "org.freedesktop.Sdk",
   "command": "factorio",
   "rename-desktop-file": "factorio.desktop",

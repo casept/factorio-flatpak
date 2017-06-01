@@ -18,7 +18,7 @@ flatpak remote-add --user --if-not-exists --from gnome https://sdk.gnome.org/gno
 flatpak install --user gnome org.freedesktop.Sdk 1.6      
 flatpak install --user gnome org.freedesktop.Platform 1.6          
 ```
-Place a .tar.gz of version 0.15.1 of the game into the directory (It should be named `factorio-0.15.1.tar.gz`).     
+Place a .tar.gz of the game into the directory (It should be named `factorio.tar.gz`).     
 Then run `make`. This will create a `.flatpak` file in the directory, which contains the game.     
 
 ## Installation      
